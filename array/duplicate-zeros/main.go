@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func duplicateZeros(arr []int) []int {
+func duplicateZeros(arr []int) {
 	for i := 0; i < len(arr); i++ {
 		if arr[i] == 0 {
 			for j := len(arr) - 1; j > i; j-- {
@@ -11,10 +11,10 @@ func duplicateZeros(arr []int) []int {
 			i++
 		}
 	}
-	return arr
 }
 
 func main() {
 	arr := []int{1, 0, 2, 3, 0, 4, 5, 0}
-	fmt.Println(duplicateZeros(arr))
+	duplicateZeros(arr)
+	fmt.Println(arr)
 }
